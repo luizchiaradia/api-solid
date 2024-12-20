@@ -15,6 +15,7 @@ export async function register(request: FastifyRequest, replay: FastifyReply) {
   try {
     const usersRepository = new PrismaUsersRepository();
     const registerUseCase = new RegisterUseCase(usersRepository);
+    console.log(registerUseCase)
     await registerUseCase.execute({ name, email, password });
   } catch (err) {
     return replay.status(409).send();
