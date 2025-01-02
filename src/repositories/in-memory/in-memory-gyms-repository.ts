@@ -13,14 +13,15 @@ export class InMemoryGymsRepository implements GymRepository {
         return gym
     }
 
-    async create(data: Prisma.GymUncheckedCreateInput) {
+    async create(data: Prisma.GymCreateInput) {
         const gym = {
-            id: randomUUID(),
+            id: data.id ?? randomUUID(),
             title: data.title,
             description: data.description ?? null,
             phone: data.phone ?? null,
-            latitude: new Prisma.Decimal(data.latitude as any),
-            longitude: new Prisma.Decimal(data.longitude as any),
+            latitude: new Prisma.Decimal(data.latitude.toString()),
+            longitude: new Prisma.Decimal(data.longitude.toString()),
+            created_at: new Date(),
         }
         this.items.push(gym)
         return gym
