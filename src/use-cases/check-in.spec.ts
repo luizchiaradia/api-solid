@@ -6,14 +6,14 @@ import { MaxDistanceError } from "./errors/max-distance-error";
 import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins";
 
 let sut: CheckInUseCase;
-let usersRepository: InMemoryCheckInsRepository;
+let checkInsRepository: InMemoryCheckInsRepository;
 let gymsRepository: InMemoryGymsRepository;
 
 describe("Check-in Use Case", () => {
   beforeEach(async() => {
-    usersRepository = new InMemoryCheckInsRepository();
+    checkInsRepository = new InMemoryCheckInsRepository();
     gymsRepository = new InMemoryGymsRepository();
-    sut = new CheckInUseCase(usersRepository, gymsRepository);
+    sut = new CheckInUseCase(checkInsRepository, gymsRepository);
     vi.useFakeTimers();
     await gymsRepository.create({
       id: "gym-01",
