@@ -10,7 +10,7 @@ export async function metrics(request: FastifyRequest, replay: FastifyReply) {
     userId: request.user.sub,
   });
 
-  return replay.status(201).send({
+  return replay.status(200).send({
     checkInsCount
   });
 }

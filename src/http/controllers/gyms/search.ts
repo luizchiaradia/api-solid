@@ -18,7 +18,7 @@ export async function search(request: FastifyRequest, replay: FastifyReply) {
     page,
   });
 
-  return replay.status(201).send({
+  return replay.status(200).send({
     gyms
   });
 }
