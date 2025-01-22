@@ -15,5 +15,5 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: npm ci --no-package-lock
+      - run: npm ci --frozen-lockfile
       - run: npm run test
