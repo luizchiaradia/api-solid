@@ -3,7 +3,7 @@ import { CheckInUseCase } from "./check-in";
 import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository";
 import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository";
 import { MaxDistanceError } from "./errors/max-distance-error";
-import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins";
+import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
 
 let sut: CheckInUseCase;
 let checkInsRepository: InMemoryCheckInsRepository;

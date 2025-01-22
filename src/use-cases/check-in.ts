@@ -3,7 +3,7 @@ import { CheckInsRepository } from "@/repositories/check-ins-repository";
 import { GymRepository } from "@/repositories/gyms-repository";
 import { ResourceNotFoundError } from "./errors/resource-not-found-error";
 import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
-import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins";
+import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
 import { MaxDistanceError } from "./errors/max-distance-error";
 
 interface CheckInUseCaseRequest {
