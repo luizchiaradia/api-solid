@@ -3,4 +3,3 @@ build
 .env
 data
 coverage
-package-lock.json
