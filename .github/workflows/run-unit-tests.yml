@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-          cache-dependency-path: ./package.json
 
-      - run: npm ci
+      - run: npm ci --no-package-lock
       - run: npm run test
